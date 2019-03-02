@@ -1,0 +1,49 @@
+{
+  "name": "insta-unfollower",
+  "version": "0.0.1",
+  "private": true,
+  "rnpm": {
+    "assets": [
+      "./assets/fonts"
+    ]
+  },
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "test": "jest"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "crypto-js": "^3.1.9-1",
+    "native-base": "^2.10.0",
+    "react": "16.3.1",
+    "react-native": "^0.55.2",
+    "react-native-admob": "^2.0.0-beta.5",
+    "react-native-code-push": "^5.3.4",
+    "react-native-device-info": "^0.21.5",
+    "react-native-iap": "^2.4.0-beta6",
+    "react-native-loading-spinner-overlay": "^1.0.1",
+    "react-native-popup-dialog": "^0.11.46",
+    "react-native-progress": "^3.4.0",
+    "react-native-responsive-dimensions": "^2.0.1",
+    "react-native-restart": "^0.0.6",
+    "react-native-rich-text": "^1.0.4",
+    "react-native-store-review": "^0.1.5",
+    "react-native-vector-icons": "^4.6.0",
+    "react-navigation": "^2.12.1",
+    "react-redux": "^5.0.7",
+    "redux": "^4.0.0",
+    "redux-persist": "^5.10.0",
+    "redux-thunk": "^2.3.0",
+    "styled-components": "^3.2.5"
+  },
+  "devDependencies": {
+    "babel-jest": "22.4.3",
+    "babel-preset-react-native": "4.0.0",
+    "eslint-config-bhram": "^3.2.2",
+    "jest": "22.4.3",
+    "react-test-renderer": "16.3.1"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}

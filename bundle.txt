@@ -1,0 +1,30 @@
+react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res
+gradlew assembleRelease
+
+
+for ios 
+=============================
+react-native bundle --entry-file index.js --platform ios --dev false --bundle-output ios/main.jsbundle --assets-dest ios
+jsCodeLocation = [[NSBundle mainBundle] URLForResource:@"main" withExtension:@"jsbundle"]; 
+
+
+or you can add this if condetions between release and debug 
+==========
+ #ifdef DEBUG
+  jsCodeLocation = [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index" fallbackResource:nil];
+  #else
+  jsCodeLocation = [[NSBundle mainBundle] URLForResource:@"main" withExtension:@"jsbundle"];
+  #endif
+
+
+
+
+#Code Push
+===================================
+code-push release-react instaUnfollower-android android
+code-push promote instaUnfollower-android Staging Production
+
+
+========== for ios ===========
+code-push release-react instaUnfollower-ios ios -p "./ios/InstaUnfollower/Info.plist"
+code-push promote instaUnfollower-ios Staging Production
